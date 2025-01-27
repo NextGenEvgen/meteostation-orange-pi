@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+<head>
+    <title>
+    Метеостанция
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="data">
+        Температура
+        <div>{{temperature}} C</div>
+    </div>
+    <div class="data">
+        Влажность
+        <div>{{humidity}} %</div>
+    </div>    
+</body>

@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(252, 247, 241);
+}
+
+.data {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font: 72px "Fira Sans", sans-serif;
+}

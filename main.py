@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import dht11_sensor as dht
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 def root():
     result = dht.read_data()
     if result != None:
-        return f'Температура: {result.temperature}C<br>Влажность: {result.humidity}%'
+        return render_template('index.html', temperature=result.temperature, humidity=result.humidity)
     return 'Ошибка сбора данных'
 
 if __name__ == '__main__':
